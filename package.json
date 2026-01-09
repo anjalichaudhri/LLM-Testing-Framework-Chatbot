@@ -12,6 +12,7 @@
     "test:appointment": "playwright test tests/e2e/appointment-flow.spec.js",
     "test:ui-interactions": "playwright test tests/e2e/ui-interactions.spec.js",
     "test:advanced": "playwright test tests/e2e/advanced-features.spec.js",
+    "test:advanced-ai": "playwright test tests/e2e/advanced-ai-llm-testing.spec.js",
     "test:all": "playwright test",
     "report": "playwright show-report",
     "dashboard": "node scripts/generate-dashboard.js",

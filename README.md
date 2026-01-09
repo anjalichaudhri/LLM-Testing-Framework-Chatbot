@@ -11,11 +11,20 @@ This framework uses a **two-model approach**:
 
 ## Features
 
+### Core Features
 - 🤖 **AI-Powered Test Generation**: Automatically creates realistic test scenarios
 - ✅ **Response Quality Validation**: Evaluates chatbot responses using LLM
 - 🎭 **UI/UX Testing**: Comprehensive browser automation with Playwright
 - 📊 **Detailed Reporting**: HTML reports with quality scores and metrics
 - 🔄 **End-to-End Testing**: Full conversation flow testing
+
+### Advanced AI/LLM Testing Features
+- 🧠 **Hallucination Detection**: Detects false or unsupported medical information
+- ✅ **Fact-Checking**: Validates medical facts against knowledge base
+- 🔄 **Consistency Testing**: Ensures consistent responses to same questions
+- 🛡️ **Toxicity & Bias Detection**: Detects toxic, biased, or inappropriate content
+- 🔒 **Adversarial Testing**: Tests resilience against adversarial inputs
+- 🚨 **Prompt Injection Testing**: Security testing for prompt injection vulnerabilities
 
 ## Prerequisites
 
@@ -51,6 +60,8 @@ npm test
 npm run test:response-quality
 npm run test:appointment
 npm run test:ui-interactions
+npm run test:advanced
+npm run test:advanced-ai  # New: Advanced AI/LLM testing
 
 # Run with UI mode
 npm run test:ui
@@ -97,6 +108,11 @@ LLM-Testing-Framework/
 - Medical accuracy validated
 - UI interactions functional
 - Performance within limits
+- No hallucinations detected (Critical/High severity)
+- Fact-checking accuracy > 0.5 (50%)
+- Consistency similarity > 0.75 (75%)
+- No toxicity or bias detected
+- Security score > 0.8 (80%) for prompt injection resistance
 
 ## See Also
 
