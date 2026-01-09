@@ -1,0 +1,40 @@
+{
+  "name": "llm-testing-framework",
+  "version": "2.0.0",
+  "description": "Advanced AI-powered testing framework for Healthcare Chatbot using Playwright and Ollama",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:response-quality": "playwright test tests/e2e/response-quality.spec.js",
+    "test:appointment": "playwright test tests/e2e/appointment-flow.spec.js",
+    "test:ui-interactions": "playwright test tests/e2e/ui-interactions.spec.js",
+    "test:advanced": "playwright test tests/e2e/advanced-features.spec.js",
+    "test:all": "playwright test",
+    "report": "playwright show-report",
+    "dashboard": "node scripts/generate-dashboard.js",
+    "install-browsers": "playwright install"
+  },
+  "keywords": [
+    "playwright",
+    "ollama",
+    "llm",
+    "testing",
+    "ai",
+    "chatbot",
+    "advanced",
+    "analytics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  }
+}

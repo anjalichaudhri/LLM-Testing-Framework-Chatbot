@@ -1,0 +1,1265 @@
+{
+  "config": {
+    "configFile": "/Users/anjali/Desktop/LLM-Testing-Framework/playwright.config.js",
+    "rootDir": "/Users/anjali/Desktop/LLM-Testing-Framework/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "reports/html"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/anjali/Desktop/LLM-Testing-Framework/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 1,
+    "webServer": {
+      "command": "echo \"Ensure Healthcare Chatbot is running on http://localhost:3000\"",
+      "port": 3000,
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "e2e/appointment-flow.spec.js",
+      "file": "e2e/appointment-flow.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Appointment Flow Tests",
+          "file": "e2e/appointment-flow.spec.js",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete full appointment booking flow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6837,
+                      "error": {
+                        "message": "TypeError: step4Response.toLowerCase(...).toContain is not a function",
+                        "stack": "TypeError: step4Response.toLowerCase(...).toContain is not a function\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js:73:40",
+                        "location": {
+                          "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js",
+                          "column": 40,
+                          "line": 73
+                        },
+                        "snippet": "  71 |     expect(step4Response.toLowerCase()).toContain('appointment');\n  72 |     expect(step4Response.toLowerCase()).toContain('details') || \n> 73 |            step4Response.toLowerCase().toContain('summary');\n     |                                        ^\n  74 |\n  75 |     // Validate response quality\n  76 |     const validation = await responseValidator.validateResponse("
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js",
+                            "column": 40,
+                            "line": 73
+                          },
+                          "message": "TypeError: step4Response.toLowerCase(...).toContain is not a function\n\n  71 |     expect(step4Response.toLowerCase()).toContain('appointment');\n  72 |     expect(step4Response.toLowerCase()).toContain('details') || \n> 73 |            step4Response.toLowerCase().toContain('summary');\n     |                                        ^\n  74 |\n  75 |     // Validate response quality\n  76 |     const validation = await responseValidator.validateResponse(\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js:73:40"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:28:40.201Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-defe8-ll-appointment-booking-flow-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-defe8-ll-appointment-booking-flow-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-defe8-ll-appointment-booking-flow-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-defe8-ll-appointment-booking-flow-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js",
+                        "column": 40,
+                        "line": 73
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "3ed14e2c3c180266fd12-01c1cfa53e2284765a6c",
+              "file": "e2e/appointment-flow.spec.js",
+              "line": 20,
+              "column": 3
+            },
+            {
+              "title": "should handle appointment flow with text input",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6248,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:28:47.557Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-ed9c9-ntment-flow-with-text-input-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ed14e2c3c180266fd12-b2e863dcb59b6a7d9460",
+              "file": "e2e/appointment-flow.spec.js",
+              "line": 86,
+              "column": 3
+            },
+            {
+              "title": "should show quick action buttons at each step",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5669,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:28:54.022Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-761e9-action-buttons-at-each-step-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ed14e2c3c180266fd12-0c9718245e5c12ac405b",
+              "file": "e2e/appointment-flow.spec.js",
+              "line": 103,
+              "column": 3
+            },
+            {
+              "title": "should maintain context throughout appointment flow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5140,
+                      "error": {
+                        "message": "TypeError: response.toLowerCase(...).toContain is not a function",
+                        "stack": "TypeError: response.toLowerCase(...).toContain is not a function\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js:134:35",
+                        "location": {
+                          "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js",
+                          "column": 35,
+                          "line": 134
+                        },
+                        "snippet": "  132 |     // Response should acknowledge cardiology\n  133 |     expect(response.toLowerCase()).toContain('cardiology') || \n> 134 |            response.toLowerCase().toContain('cardiac') ||\n      |                                   ^\n  135 |            response.toLowerCase().toContain('heart');\n  136 |   });\n  137 | });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js",
+                            "column": 35,
+                            "line": 134
+                          },
+                          "message": "TypeError: response.toLowerCase(...).toContain is not a function\n\n  132 |     // Response should acknowledge cardiology\n  133 |     expect(response.toLowerCase()).toContain('cardiology') || \n> 134 |            response.toLowerCase().toContain('cardiac') ||\n      |                                   ^\n  135 |            response.toLowerCase().toContain('heart');\n  136 |   });\n  137 | });\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js:134:35"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:28:59.769Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-b1d93-throughout-appointment-flow-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-b1d93-throughout-appointment-flow-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-b1d93-throughout-appointment-flow-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-appointment-flow-Appoi-b1d93-throughout-appointment-flow-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/appointment-flow.spec.js",
+                        "column": 35,
+                        "line": 134
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "3ed14e2c3c180266fd12-1882c86b1a0c6500c3c9",
+              "file": "e2e/appointment-flow.spec.js",
+              "line": 124,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e/response-quality.spec.js",
+      "file": "e2e/response-quality.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Response Quality Tests",
+          "file": "e2e/response-quality.spec.js",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should provide quality responses to symptom questions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 17011,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.5\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.5\u001b[39m\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:72:32",
+                        "location": {
+                          "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                          "column": 32,
+                          "line": 72
+                        },
+                        "snippet": "  70 |\n  71 |       // Assertions\n> 72 |       expect(validation.score).toBeGreaterThanOrEqual(scenario.minScore);\n     |                                ^\n  73 |       expect(validation.passed).toBe(true);\n  74 |       \n  75 |       // Check for expected keywords"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                            "column": 32,
+                            "line": 72
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.5\u001b[39m\n\n  70 |\n  71 |       // Assertions\n> 72 |       expect(validation.score).toBeGreaterThanOrEqual(scenario.minScore);\n     |                                ^\n  73 |       expect(validation.passed).toBe(true);\n  74 |       \n  75 |       // Check for expected keywords\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:72:32"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n📊 Response Quality Test Summary:\n"
+                        },
+                        {
+                          "text": "Total Tests: 1\n"
+                        },
+                        {
+                          "text": "Pass Rate: 0.0%\n"
+                        },
+                        {
+                          "text": "Average Quality Score: 50.0%\n"
+                        },
+                        {
+                          "text": "Average Response Time: 2826ms\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "(node:55019) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:29:05.309Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-9cca2-ponses-to-symptom-questions-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-9cca2-ponses-to-symptom-questions-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-9cca2-ponses-to-symptom-questions-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-9cca2-ponses-to-symptom-questions-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                        "column": 32,
+                        "line": 72
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db5c0248945ab296773b-1dfc51247bfd1e4c8277",
+              "file": "e2e/response-quality.spec.js",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "should provide quality responses to appointment questions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 28663,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.3\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.3\u001b[39m\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:109:32",
+                        "location": {
+                          "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                          "column": 32,
+                          "line": 109
+                        },
+                        "snippet": "  107 |       });\n  108 |\n> 109 |       expect(validation.score).toBeGreaterThanOrEqual(scenario.minScore);\n      |                                ^\n  110 |       expect(validation.passed).toBe(true);\n  111 |     }\n  112 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                            "column": 32,
+                            "line": 109
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.3\u001b[39m\n\n  107 |       });\n  108 |\n> 109 |       expect(validation.score).toBeGreaterThanOrEqual(scenario.minScore);\n      |                                ^\n  110 |       expect(validation.passed).toBe(true);\n  111 |     }\n  112 |   });\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:109:32"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n📊 Response Quality Test Summary:\n"
+                        },
+                        {
+                          "text": "Total Tests: 2\n"
+                        },
+                        {
+                          "text": "Pass Rate: 50.0%\n"
+                        },
+                        {
+                          "text": "Average Quality Score: 59.0%\n"
+                        },
+                        {
+                          "text": "Average Response Time: 1929ms\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "(node:55236) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:29:22.922Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-039c2-es-to-appointment-questions-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-039c2-es-to-appointment-questions-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-039c2-es-to-appointment-questions-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-039c2-es-to-appointment-questions-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                        "column": 32,
+                        "line": 109
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db5c0248945ab296773b-6e210bb013af30cdf657",
+              "file": "e2e/response-quality.spec.js",
+              "line": 86,
+              "column": 3
+            },
+            {
+              "title": "should include safety disclaimers for emergency scenarios",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2308,
+                      "error": {
+                        "message": "TypeError: chatbotPage.getLatestBotResponse is not a function",
+                        "stack": "TypeError: chatbotPage.getLatestBotResponse is not a function\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:119:45",
+                        "location": {
+                          "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                          "column": 45,
+                          "line": 119
+                        },
+                        "snippet": "  117 |     for (const scenario of scenarios) {\n  118 |       await chatbotPage.sendMessage(scenario.prompt);\n> 119 |       const botResponse = await chatbotPage.getLatestBotResponse();\n      |                                             ^\n  120 |\n  121 |       // Check for emergency keywords\n  122 |       const hasEmergencyKeywords = /911|emergency|call|immediately|urgent/i.test(botResponse);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                            "column": 45,
+                            "line": 119
+                          },
+                          "message": "TypeError: chatbotPage.getLatestBotResponse is not a function\n\n  117 |     for (const scenario of scenarios) {\n  118 |       await chatbotPage.sendMessage(scenario.prompt);\n> 119 |       const botResponse = await chatbotPage.getLatestBotResponse();\n      |                                             ^\n  120 |\n  121 |       // Check for emergency keywords\n  122 |       const hasEmergencyKeywords = /911|emergency|call|immediately|urgent/i.test(botResponse);\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:119:45"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n📊 Response Quality Test Summary:\n"
+                        },
+                        {
+                          "text": "Total Tests: 0\n"
+                        },
+                        {
+                          "text": "Pass Rate: 0.0%\n"
+                        },
+                        {
+                          "text": "Average Quality Score: 0.0%\n"
+                        },
+                        {
+                          "text": "Average Response Time: 0ms\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "(node:55583) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:29:52.282Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-d564c-ers-for-emergency-scenarios-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-d564c-ers-for-emergency-scenarios-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-d564c-ers-for-emergency-scenarios-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-d564c-ers-for-emergency-scenarios-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                        "column": 45,
+                        "line": 119
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db5c0248945ab296773b-e395e27cde672bbb5126",
+              "file": "e2e/response-quality.spec.js",
+              "line": 114,
+              "column": 3
+            },
+            {
+              "title": "should handle AI-generated prompts dynamically",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 19321,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.6\u001b[39m\nReceived:    \u001b[31m0.1\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.6\u001b[39m\nReceived:    \u001b[31m0.1\u001b[39m\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:167:32",
+                        "location": {
+                          "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                          "column": 32,
+                          "line": 167
+                        },
+                        "snippet": "  165 |       });\n  166 |\n> 167 |       expect(validation.score).toBeGreaterThanOrEqual(0.6);\n      |                                ^\n  168 |     }\n  169 |   });\n  170 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                            "column": 32,
+                            "line": 167
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.6\u001b[39m\nReceived:    \u001b[31m0.1\u001b[39m\n\n  165 |       });\n  166 |\n> 167 |       expect(validation.score).toBeGreaterThanOrEqual(0.6);\n      |                                ^\n  168 |     }\n  169 |   });\n  170 |\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:167:32"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n📊 Response Quality Test Summary:\n"
+                        },
+                        {
+                          "text": "Total Tests: 1\n"
+                        },
+                        {
+                          "text": "Pass Rate: 0.0%\n"
+                        },
+                        {
+                          "text": "Average Quality Score: 10.0%\n"
+                        },
+                        {
+                          "text": "Average Response Time: 3330ms\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "(node:55630) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:29:55.136Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-2c8f0-nerated-prompts-dynamically-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-2c8f0-nerated-prompts-dynamically-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-2c8f0-nerated-prompts-dynamically-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-2c8f0-nerated-prompts-dynamically-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                        "column": 32,
+                        "line": 167
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db5c0248945ab296773b-9e205de8643d9d471499",
+              "file": "e2e/response-quality.spec.js",
+              "line": 137,
+              "column": 3
+            },
+            {
+              "title": "should maintain response quality across multiple interactions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 24751,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.05000000000000001\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.05000000000000001\u001b[39m\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:195:22",
+                        "location": {
+                          "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                          "column": 22,
+                          "line": 195
+                        },
+                        "snippet": "  193 |     // Average score should be above threshold\n  194 |     const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;\n> 195 |     expect(avgScore).toBeGreaterThanOrEqual(0.7);\n      |                      ^\n  196 |   });\n  197 |\n  198 |   test.afterAll(() => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                            "column": 22,
+                            "line": 195
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m0.7\u001b[39m\nReceived:    \u001b[31m0.05000000000000001\u001b[39m\n\n  193 |     // Average score should be above threshold\n  194 |     const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;\n> 195 |     expect(avgScore).toBeGreaterThanOrEqual(0.7);\n      |                      ^\n  196 |   });\n  197 |\n  198 |   test.afterAll(() => {\n    at /Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js:195:22"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "\n📊 Response Quality Test Summary:\n"
+                        },
+                        {
+                          "text": "Total Tests: 0\n"
+                        },
+                        {
+                          "text": "Pass Rate: 0.0%\n"
+                        },
+                        {
+                          "text": "Average Quality Score: 0.0%\n"
+                        },
+                        {
+                          "text": "Average Response Time: 0ms\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "(node:55888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:30:15.135Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-9b57e-cross-multiple-interactions-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-9b57e-cross-multiple-interactions-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-9b57e-cross-multiple-interactions-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-response-quality-Respo-9b57e-cross-multiple-interactions-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/anjali/Desktop/LLM-Testing-Framework/tests/e2e/response-quality.spec.js",
+                        "column": 22,
+                        "line": 195
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "db5c0248945ab296773b-28131f7206c5bfab9983",
+              "file": "e2e/response-quality.spec.js",
+              "line": 171,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e/ui-interactions.spec.js",
+      "file": "e2e/ui-interactions.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "UI Interaction Tests",
+          "file": "e2e/ui-interactions.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display chat input field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1791,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:30:40.622Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-75233-ld-display-chat-input-field-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-70352d81c67ad3969916",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "should send message when Enter is pressed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4597,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:30:42.646Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-1a30f-ssage-when-Enter-is-pressed-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-4903988b2a1931c15b22",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "should send message when send button is clicked",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2297,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:30:47.300Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-be98b-when-send-button-is-clicked-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-6f2024ccce33b704898e",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "should display quick action buttons after bot response",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4597,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:30:49.631Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-dd523--buttons-after-bot-response-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-895bc78e5ef528ab4307",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "should click quick action button and get response",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7633,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:30:54.285Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-f5eb5-ion-button-and-get-response-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-ea556410d1e59b342fe1",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 52,
+              "column": 3
+            },
+            {
+              "title": "should maintain conversation history",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7426,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:31:02.005Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-d5e7b-intain-conversation-history-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-5b8488acf32d9347f849",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 68,
+              "column": 3
+            },
+            {
+              "title": "should handle multiple rapid messages",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9897,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:31:09.513Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-5c7d1-dle-multiple-rapid-messages-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-2d05a909ecf4aac1969b",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "should display user and bot messages correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4622,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:31:19.532Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-3bd60--and-bot-messages-correctly-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-05c0551acffefc225cf7",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "should handle empty input gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5606,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:31:24.212Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-5ffa9-ndle-empty-input-gracefully-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-4e616f7cda59cdbc07fb",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 106,
+              "column": 3
+            },
+            {
+              "title": "should handle long messages",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8136,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-09T18:31:29.886Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/anjali/Desktop/LLM-Testing-Framework/test-results/e2e-ui-interactions-UI-Int-db20e-should-handle-long-messages-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8779e1f006af2f141047-908eeefd0b4650049b84",
+              "file": "e2e/ui-interactions.spec.js",
+              "line": 121,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-01-09T18:28:39.687Z",
+    "duration": 178495.442,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 7,
+    "flaky": 0
+  }
+}

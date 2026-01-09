@@ -1,0 +1,11 @@
+{
+  "testId": "test_e2d8aedf",
+  "prompt": "What are the symptoms of flu?",
+  "response": "🏥Thank you for sharing. I can provide general health information, but for personalized medical advice, please consult your healthcare provider. What would you like to know more about?12:32 AMGet HelpFind Doctor",
+  "metadata": {
+    "category": "symptoms",
+    "quality": "good",
+    "createdAt": "2026-01-09T19:02:41.908Z",
+    "version": "1.0"
+  }
+}

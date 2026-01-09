@@ -1,0 +1,76 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: 🏥
+    - generic [ref=e7]:
+      - heading "Healthcare Assistant" [level=1] [ref=e8]
+      - paragraph [ref=e9]: Online
+    - generic [ref=e10]:
+      - button "Export Conversation" [ref=e11] [cursor=pointer]:
+        - img [ref=e12]
+      - button "View Profile" [ref=e15] [cursor=pointer]:
+        - img [ref=e16]
+  - generic [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]: 🏥
+      - paragraph [ref=e23]:
+        - text: Hello! I'm your healthcare assistant. I can help with general health information, symptoms, appointments, medications, and wellness tips.
+        - strong [ref=e24]: "Important:"
+        - text: I'm not a replacement for professional medical advice. For emergencies, call 911. How can I assist you today?
+    - generic [ref=e25]:
+      - generic [ref=e26]: 👤
+      - generic [ref=e27]:
+        - paragraph [ref=e28]: I've been experiencing some abdominal pain and nausea for the past few days. I'm worried it might be something serious.
+        - generic [ref=e29]: 12:35 AM
+    - generic [ref=e30]:
+      - generic [ref=e31]: 🏥
+      - generic [ref=e32]:
+        - paragraph [ref=e33]:
+          - text: ℹ️
+          - strong [ref=e34]: LOW Priority
+          - text: I understand you're experiencing nausea. Nausea can be caused by various factors including infections, medications, or digestive issues. I understand this is concerning for you. How long have you been experiencing this? On a scale of 1-10, how would you rate the severity? Are you experiencing any other symptoms?
+          - strong [ref=e35]: "General recommendations:"
+          - text: 1. Stay hydrated with small sips
+          - text: 2. Avoid heavy or spicy foods
+          - text: 3. Rest
+          - text: 4. Seek care if severe or persistent
+          - strong [ref=e36]: "Recommended Action:"
+          - text: Schedule routine appointment
+          - text: ⚠️ For proper diagnosis and treatment, please consult with a healthcare professional.
+        - generic [ref=e37]: 12:35 AM
+        - generic [ref=e38]:
+          - button "Schedule Appointment" [ref=e39] [cursor=pointer]
+          - button "Find Doctor" [ref=e40] [cursor=pointer]
+          - button "More Info" [ref=e41] [cursor=pointer]
+    - generic [ref=e42]:
+      - generic [ref=e43]: 👤
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: It's more of a dull ache in my lower abdomen. It's not necessarily worse on one side, but I can feel it more when I touch that area. And yeah, I've had some nausea and vomiting too. It started about 3 days ago and it's been pretty consistent since then.
+        - generic [ref=e46]: 12:35 AM
+    - generic [ref=e47]:
+      - generic [ref=e48]: 🏥
+      - generic [ref=e49]:
+        - paragraph [ref=e50]:
+          - text: ℹ️
+          - strong [ref=e51]: LOW Priority
+          - text: I understand you're experiencing nausea. Nausea can be caused by various factors including infections, medications, or digestive issues. I understand this is concerning for you. You mentioned it's been 3 days.
+          - strong [ref=e52]: "General recommendations:"
+          - text: 1. Stay hydrated with small sips
+          - text: 2. Avoid heavy or spicy foods
+          - text: 3. Rest
+          - text: 4. Seek care if severe or persistent
+          - strong [ref=e53]: "Recommended Action:"
+          - text: Schedule routine appointment
+          - text: ⚠️ For proper diagnosis and treatment, please consult with a healthcare professional.
+        - generic [ref=e54]: 12:35 AM
+        - generic [ref=e55]:
+          - button "Schedule Appointment" [ref=e56] [cursor=pointer]
+          - button "Find Doctor" [ref=e57] [cursor=pointer]
+          - button "More Info" [ref=e58] [cursor=pointer]
+  - generic [ref=e60]:
+    - textbox "Ask about symptoms, appointments, medications, or wellness..." [active] [ref=e61]
+    - button [ref=e62] [cursor=pointer]:
+      - img [ref=e63]
+```
